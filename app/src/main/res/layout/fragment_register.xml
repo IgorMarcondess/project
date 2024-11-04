@@ -48,7 +48,7 @@
         android:id="@+id/emailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
         android:text="E-mail"
         android:textColor="#003EA6"
         android:textStyle="bold"
@@ -77,15 +77,14 @@
         android:text="Trocar E-mail"
         android:textColor="#003EA6"
         app:layout_constraintEnd_toEndOf="@+id/EmailEditText"
-        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="@+id/EmailEditText"
-        tools:layout_editor_absoluteY="293dp" />
+        tools:layout_editor_absoluteY="326dp" />
 
     <TextView
         android:id="@+id/passwordLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:text="Senha"
         android:textColor="#003EA6"
         android:textStyle="bold"
@@ -107,18 +106,17 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="368dp" />
 
+    <!-- Telefone Label -->
+
     <TextView
         android:id="@+id/resetPasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="Redefinir senha"
         android:textColor="#003EA6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/PasswordEditText" />
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="238dp" />
 
-    <!-- Telefone Label -->
     <TextView
         android:id="@+id/phoneLabel"
         android:layout_width="wrap_content"
@@ -132,20 +130,22 @@
         app:layout_constraintTop_toBottomOf="@id/resetPasswordText" />
 
     <!-- Telefone Field -->
+
+    <!-- Redefinir Telefone Text -->
     <EditText
         android:id="@+id/PhoneEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="216dp"
         android:background="@drawable/rounded_edittext"
         android:hint="Telefone"
         android:inputType="phone"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phoneLabel" />
 
-    <!-- Redefinir Telefone Text -->
     <TextView
         android:id="@+id/resetPhoneText"
         android:layout_width="wrap_content"
