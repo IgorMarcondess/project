@@ -7,13 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 
 class HomeFragment : Fragment() {
-
+    private var _binding: HomeFragment? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
     }
 
     override fun onCreateView(
