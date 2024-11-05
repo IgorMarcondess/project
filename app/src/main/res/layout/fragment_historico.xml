@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoricoFragment">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Histórico Médico"
+        android:textColor="#003EA6"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Pergunta 1 -->
+
+    <TextView
+        android:id="@+id/treatmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="Já realizou tratamento?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <CheckBox
+        android:id="@+id/treatmentYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="Sim"
+        app:layout_constraintBottom_toBottomOf="@+id/treatmentTextView"
+        app:layout_constraintStart_toEndOf="@id/treatmentTextView"
+        app:layout_constraintTop_toTopOf="@+id/treatmentTextView"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <CheckBox
+        android:id="@+id/treatmentNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Não"
+        app:layout_constraintBottom_toBottomOf="@+id/treatmentYes"
+        app:layout_constraintStart_toEndOf="@id/treatmentYes"
+        app:layout_constraintTop_toTopOf="@+id/treatmentYes" />
+
+    <!-- Pergunta 2 -->
+
+    <TextView
+        android:id="@+id/rootCanalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:text="Já realizou canal?"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/treatmentTextView" />
+
+    <CheckBox
+        android:id="@+id/rootCanalYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:text="Sim"
+        app:layout_constraintBottom_toBottomOf="@+id/rootCanalTextView"
+        app:layout_constraintStart_toEndOf="@id/rootCanalTextView"
+        app:layout_constraintTop_toTopOf="@+id/rootCanalTextView" />
+
+    <CheckBox
+        android:id="@+id/rootCanalNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Não"
+        app:layout_constraintBottom_toBottomOf="@+id/rootCanalYes"
+        app:layout_constraintStart_toEndOf="@id/rootCanalYes"
+        app:layout_constraintTop_toTopOf="@+id/rootCanalYes" />
+
+    <!-- Pergunta 3 -->
+
+    <TextView
+        android:id="@+id/cleaningTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:text="Já realizou limpeza?"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rootCanalTextView" />
+
+    <CheckBox
+        android:id="@+id/cleaningYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:text="Sim"
+        app:layout_constraintBottom_toBottomOf="@+id/cleaningTextView"
+        app:layout_constraintStart_toEndOf="@id/cleaningTextView"
+        app:layout_constraintTop_toTopOf="@+id/cleaningTextView" />
+
+    <CheckBox
+        android:id="@+id/cleaningNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Não"
+        app:layout_constraintBottom_toBottomOf="@+id/cleaningYes"
+        app:layout_constraintStart_toEndOf="@id/cleaningYes"
+        app:layout_constraintTop_toTopOf="@+id/cleaningYes" />
+
+    <!-- Pergunta 4 -->
+
+    <TextView
+        android:id="@+id/bracesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:text="Já realizou colocação de aparelho ortodôntico?"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cleaningTextView" />
+
+    <CheckBox
+        android:id="@+id/bracesYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Sim"
+        app:layout_constraintBottom_toBottomOf="@+id/bracesTextView"
+        app:layout_constraintStart_toEndOf="@id/bracesTextView"
+        app:layout_constraintTop_toTopOf="@+id/bracesTextView" />
+
+    <CheckBox
+        android:id="@+id/bracesNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Não"
+        app:layout_constraintBottom_toBottomOf="@+id/bracesYes"
+        app:layout_constraintStart_toEndOf="@id/bracesYes"
+        app:layout_constraintTop_toTopOf="@+id/bracesYes" />
+
+    <!-- Pergunta 5 -->
+
+    <TextView
+        android:id="@+id/surgeryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:text="Já realizou alguma cirurgia?"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bracesTextView" />
+
+    <CheckBox
+        android:id="@+id/surgeryYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Sim"
+        app:layout_constraintBottom_toBottomOf="@+id/surgeryTextView"
+        app:layout_constraintStart_toEndOf="@+id/surgeryTextView"
+        app:layout_constraintTop_toTopOf="@+id/surgeryTextView" />
+
+    <CheckBox
+        android:id="@+id/surgeryNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Não"
+        app:layout_constraintBottom_toBottomOf="@+id/surgeryYes"
+        app:layout_constraintStart_toEndOf="@id/surgeryYes"
+        app:layout_constraintTop_toTopOf="@+id/surgeryYes" />
+
+    <!-- Botão de Enviar -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surgeryTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
