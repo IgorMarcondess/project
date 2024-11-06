@@ -16,5 +16,14 @@
     <fragment
         android:id="@+id/singUpFragment"
         android:name="com.example.project.SingUpFragment"
-        android:label="SingUpFragment" />
+        android:label="SingUpFragment" >
+        <action
+            android:id="@+id/action_singUpFragment_to_singUp2Fragment"
+            app:destination="@id/singUp2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUp2Fragment"
+        android:name="com.example.project.SingUp2Fragment"
+        android:label="fragment_sing_up2"
+        tools:layout="@layout/fragment_sing_up2" />
 </navigation>

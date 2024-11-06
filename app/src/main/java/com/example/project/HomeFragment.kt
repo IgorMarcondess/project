@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.project.databinding.FragmentSingUpBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -32,13 +33,14 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.registerButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_singUpFragment)
+            findNavController().navigate(R.id.singUpFragment)
         }
         binding.registerButton.setOnClickListener {
 
@@ -50,7 +52,7 @@ class HomeFragment : Fragment() {
                 val result = auth.signInWithEmailAndPassword(email, password).await()
 
                 if (result.user != null) {
-                    findNavController().navigate(R.id.homeFragment)
+                    //findNavController().navigate(R.id.homeFragment)
                 }
             }
         }

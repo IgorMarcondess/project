@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.project.databinding.FragmentSingUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -34,6 +35,7 @@ class SingUpFragment : Fragment() {
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 registerUser(email, password)
+                findNavController().navigate(R.id.action_singUpFragment_to_singUp2Fragment)
             } else {
                 Toast.makeText(context, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show()
             }
@@ -46,7 +48,6 @@ class SingUpFragment : Fragment() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(context, "Cadastro bem-sucedido", Toast.LENGTH_SHORT).show()
-                    // Aqui, você pode redirecionar para outra tela se desejar
                 } else {
                     Toast.makeText(context, "Erro ao realizar cadastro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                     Log.e("SignUpFragment", "Erro ao realizar cadastro de usuário", task.exception)
