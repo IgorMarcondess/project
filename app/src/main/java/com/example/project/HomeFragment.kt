@@ -40,9 +40,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.registerButton.setOnClickListener {
-            findNavController().navigate(R.id.singUpFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_singUpFragment)
         }
-        binding.registerButton.setOnClickListener {
+        binding.LogInbutton.setOnClickListener {
 
 
             lifecycleScope.launch {

@@ -30,14 +30,17 @@ class SingUpFragment : Fragment() {
         _binding = FragmentSingUpBinding.inflate(inflater, container, false)
 
         binding.nextButton.setOnClickListener {
-            val email = binding.emailEditText.text.toString().trim()
+            val cpf = binding.cpfEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
+            val email = binding.emailEditText.text.toString().trim()
+            val telefone = binding.phoneEditText.text.toString().trim()
 
-            if (email.isNotEmpty() && password.isNotEmpty()) {
+            if (email.isNotEmpty() && password.isNotEmpty() && cpf.isNotEmpty() && telefone.isNotEmpty()
+                && email.contains("@")) {
                 registerUser(email, password)
                 findNavController().navigate(R.id.action_singUpFragment_to_singUp2Fragment)
             } else {
-                Toast.makeText(context, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Por favor, preencha todos os campos corretamente", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -49,7 +52,7 @@ class SingUpFragment : Fragment() {
                 if (task.isSuccessful) {
                     Toast.makeText(context, "Cadastro bem-sucedido", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(context, "Erro ao realizar cadastro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Erro ao realizar cadastro", Toast.LENGTH_SHORT).show()
                     Log.e("SignUpFragment", "Erro ao realizar cadastro de usuário", task.exception)
                 }
             }
