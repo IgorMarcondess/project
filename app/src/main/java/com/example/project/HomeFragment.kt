@@ -41,6 +41,8 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_singUpFragment)
         }
         binding.registerButton.setOnClickListener {
+
+
             lifecycleScope.launch {
                 val email = binding.EmailEditText.text.toString()
                 val password = binding.PasswordEditText.text.toString()
