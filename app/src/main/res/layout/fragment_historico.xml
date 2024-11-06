@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/limpezaNao"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistoricoFragment">
@@ -21,7 +22,7 @@
     <!-- Pergunta 1 -->
 
     <TextView
-        android:id="@+id/treatmentTextView"
+        android:id="@+id/tratamentoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,29 +32,29 @@
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
     <CheckBox
-        android:id="@+id/treatmentYes"
+        android:id="@+id/tratamentoSim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:text="Sim"
-        app:layout_constraintBottom_toBottomOf="@+id/treatmentTextView"
-        app:layout_constraintStart_toEndOf="@id/treatmentTextView"
-        app:layout_constraintTop_toTopOf="@+id/treatmentTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tratamentoTextView"
+        app:layout_constraintStart_toEndOf="@id/tratamentoTextView"
+        app:layout_constraintTop_toTopOf="@+id/tratamentoTextView"
         app:layout_constraintVertical_bias="0.482" />
 
     <CheckBox
-        android:id="@+id/treatmentNo"
+        android:id="@+id/tratamentoNao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Não"
-        app:layout_constraintBottom_toBottomOf="@+id/treatmentYes"
-        app:layout_constraintStart_toEndOf="@id/treatmentYes"
-        app:layout_constraintTop_toTopOf="@+id/treatmentYes" />
+        app:layout_constraintBottom_toBottomOf="@+id/tratamentoSim"
+        app:layout_constraintStart_toEndOf="@id/tratamentoSim"
+        app:layout_constraintTop_toTopOf="@+id/tratamentoSim" />
 
 
     <TextView
-        android:id="@+id/rootCanalTextView"
+        android:id="@+id/canalTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -61,31 +62,31 @@
         android:text="Já realizou canal?"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/treatmentTextView" />
+        app:layout_constraintTop_toBottomOf="@id/tratamentoTextView" />
 
     <CheckBox
-        android:id="@+id/rootCanalYes"
+        android:id="@+id/canalSim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:text="Sim"
-        app:layout_constraintBottom_toBottomOf="@+id/rootCanalTextView"
-        app:layout_constraintStart_toEndOf="@id/rootCanalTextView"
-        app:layout_constraintTop_toTopOf="@+id/rootCanalTextView" />
+        app:layout_constraintBottom_toBottomOf="@+id/canalTextView"
+        app:layout_constraintStart_toEndOf="@id/canalTextView"
+        app:layout_constraintTop_toTopOf="@+id/canalTextView" />
 
     <CheckBox
-        android:id="@+id/rootCanalNo"
+        android:id="@+id/canalNao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Não"
-        app:layout_constraintBottom_toBottomOf="@+id/rootCanalYes"
-        app:layout_constraintStart_toEndOf="@id/rootCanalYes"
-        app:layout_constraintTop_toTopOf="@+id/rootCanalYes" />
+        app:layout_constraintBottom_toBottomOf="@+id/canalSim"
+        app:layout_constraintStart_toEndOf="@id/canalSim"
+        app:layout_constraintTop_toTopOf="@+id/canalSim" />
 
 
     <TextView
-        android:id="@+id/cleaningTextView"
+        android:id="@+id/limpezaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -93,17 +94,17 @@
         android:text="Já realizou limpeza?"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rootCanalTextView" />
+        app:layout_constraintTop_toBottomOf="@id/canalTextView" />
 
     <CheckBox
-        android:id="@+id/cleaningYes"
+        android:id="@+id/limpezaSim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:text="Sim"
-        app:layout_constraintBottom_toBottomOf="@+id/cleaningTextView"
-        app:layout_constraintStart_toEndOf="@id/cleaningTextView"
-        app:layout_constraintTop_toTopOf="@+id/cleaningTextView" />
+        app:layout_constraintBottom_toBottomOf="@+id/limpezaTextView"
+        app:layout_constraintStart_toEndOf="@id/limpezaTextView"
+        app:layout_constraintTop_toTopOf="@+id/limpezaTextView" />
 
     <CheckBox
         android:id="@+id/cleaningNo"
@@ -111,13 +112,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Não"
-        app:layout_constraintBottom_toBottomOf="@+id/cleaningYes"
-        app:layout_constraintStart_toEndOf="@id/cleaningYes"
-        app:layout_constraintTop_toTopOf="@+id/cleaningYes" />
+        app:layout_constraintBottom_toBottomOf="@+id/limpezaSim"
+        app:layout_constraintStart_toEndOf="@id/limpezaSim"
+        app:layout_constraintTop_toTopOf="@+id/limpezaSim" />
 
 
     <TextView
-        android:id="@+id/bracesTextView"
+        android:id="@+id/aparelhoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -125,31 +126,31 @@
         android:text="Já realizou colocação de aparelho ortodôntico?"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cleaningTextView" />
+        app:layout_constraintTop_toBottomOf="@id/limpezaTextView" />
 
     <CheckBox
-        android:id="@+id/bracesYes"
+        android:id="@+id/aparelhoSim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Sim"
-        app:layout_constraintBottom_toBottomOf="@+id/bracesTextView"
-        app:layout_constraintStart_toEndOf="@id/bracesTextView"
-        app:layout_constraintTop_toTopOf="@+id/bracesTextView" />
+        app:layout_constraintBottom_toBottomOf="@+id/aparelhoTextView"
+        app:layout_constraintStart_toEndOf="@id/aparelhoTextView"
+        app:layout_constraintTop_toTopOf="@+id/aparelhoTextView" />
 
     <CheckBox
-        android:id="@+id/bracesNo"
+        android:id="@+id/aparelhoNao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Não"
-        app:layout_constraintBottom_toBottomOf="@+id/bracesYes"
-        app:layout_constraintStart_toEndOf="@id/bracesYes"
-        app:layout_constraintTop_toTopOf="@+id/bracesYes" />
+        app:layout_constraintBottom_toBottomOf="@+id/aparelhoSim"
+        app:layout_constraintStart_toEndOf="@id/aparelhoSim"
+        app:layout_constraintTop_toTopOf="@+id/aparelhoSim" />
 
 
     <TextView
-        android:id="@+id/surgeryTextView"
+        android:id="@+id/cirurgiaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -157,27 +158,27 @@
         android:text="Já realizou alguma cirurgia?"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bracesTextView" />
+        app:layout_constraintTop_toBottomOf="@id/aparelhoTextView" />
 
     <CheckBox
-        android:id="@+id/surgeryYes"
+        android:id="@+id/cirurgiaSim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:text="Sim"
-        app:layout_constraintBottom_toBottomOf="@+id/surgeryTextView"
-        app:layout_constraintStart_toEndOf="@+id/surgeryTextView"
-        app:layout_constraintTop_toTopOf="@+id/surgeryTextView" />
+        app:layout_constraintBottom_toBottomOf="@+id/cirurgiaTextView"
+        app:layout_constraintStart_toEndOf="@+id/cirurgiaTextView"
+        app:layout_constraintTop_toTopOf="@+id/cirurgiaTextView" />
 
     <CheckBox
-        android:id="@+id/surgeryNo"
+        android:id="@+id/cirurgiaNao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Não"
-        app:layout_constraintBottom_toBottomOf="@+id/surgeryYes"
-        app:layout_constraintStart_toEndOf="@id/surgeryYes"
-        app:layout_constraintTop_toTopOf="@+id/surgeryYes" />
+        app:layout_constraintBottom_toBottomOf="@+id/cirurgiaSim"
+        app:layout_constraintStart_toEndOf="@id/cirurgiaSim"
+        app:layout_constraintTop_toTopOf="@+id/cirurgiaSim" />
 
     <Button
         android:id="@+id/submitButton"
@@ -185,12 +186,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:backgroundTint="#005BB5"
+        android:text="Enviar"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/surgeryTextView" />
+        app:layout_constraintTop_toBottomOf="@id/cirurgiaTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

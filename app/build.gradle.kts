@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation("com.google.firebase:firebase-auth")
+    implementation ("com.google.firebase:firebase-database:20.0.5")
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
