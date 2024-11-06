@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_homeFragment_to_singUpFragment"
             app:destination="@id/singUpFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_landingPageFragment"
+            app:destination="@id/landingPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/singUpFragment"
@@ -26,4 +29,9 @@
         android:name="com.example.project.SingUp2Fragment"
         android:label="fragment_sing_up2"
         tools:layout="@layout/fragment_sing_up2" />
+    <fragment
+        android:id="@+id/landingPageFragment"
+        android:name="com.example.project.LandingPageFragment"
+        android:label="fragment_landing_page"
+        tools:layout="@layout/fragment_landing_page" />
 </navigation>

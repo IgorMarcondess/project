@@ -1,11 +1,13 @@
 package com.example.project
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import com.example.project.databinding.FragmentHomeBinding
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.project.databinding.FragmentSingUpBinding
@@ -52,7 +54,10 @@ class HomeFragment : Fragment() {
                 val result = auth.signInWithEmailAndPassword(email, password).await()
 
                 if (result.user != null) {
-                    //findNavController().navigate(R.id.homeFragment)
+                    findNavController().navigate(R.id.action_homeFragment_to_landingPageFragment)
+                }else {
+                    Toast.makeText(context, "Erro ao realizar login, verifique seus dados", Toast.LENGTH_SHORT).show()
+                    Log.e("HomeFragment", "Erro ao realizar login de usuário")
                 }
             }
         }

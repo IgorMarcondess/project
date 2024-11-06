@@ -36,7 +36,7 @@ class SingUpFragment : Fragment() {
             val telefone = binding.phoneEditText.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty() && cpf.isNotEmpty() && telefone.isNotEmpty()
-                && email.contains("@")) {
+                && email.contains("@") && email.contains(".com") ) {
                 registerUser(email, password)
                 findNavController().navigate(R.id.action_singUpFragment_to_singUp2Fragment)
             } else {
