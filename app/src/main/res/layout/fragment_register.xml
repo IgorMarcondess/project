@@ -28,7 +28,7 @@
         android:id="@+id/profileImage"
         android:layout_width="185dp"
         android:layout_height="188dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#003EA6"
         android:contentDescription="Profile Image"
         android:scaleType="centerCrop"
@@ -136,13 +136,13 @@
         android:text="Telefone"
         android:textColor="#003EA6"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/PhoneEditText"
-        app:layout_constraintEnd_toEndOf="@+id/PhoneEditText"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneTextView"
+        app:layout_constraintEnd_toEndOf="@+id/PhoneTextView"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/PhoneEditText" />
+        app:layout_constraintStart_toStartOf="@+id/PhoneTextView" />
 
     <EditText
-        android:id="@+id/PhoneEditText"
+        android:id="@+id/PhoneTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -161,9 +161,9 @@
         android:layout_marginTop="5dp"
         android:text="Redefinir telefone"
         android:textColor="#003EA6"
-        app:layout_constraintEnd_toEndOf="@+id/PhoneEditText"
-        app:layout_constraintStart_toStartOf="@+id/PhoneEditText"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneEditText" />
+        app:layout_constraintEnd_toEndOf="@+id/PhoneTextView"
+        app:layout_constraintStart_toStartOf="@+id/PhoneTextView"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTextView" />
 
     <Button
         android:id="@+id/backButton"

@@ -28,14 +28,14 @@ class SingUpFragment : Fragment() {
     ): View? {
         _binding = FragmentSingUpBinding.inflate(inflater, container, false)
 
-        binding.button.setOnClickListener {
-            val email = binding.emailTextView.text.toString().trim()
+        binding.nextButton.setOnClickListener {
+            val email = binding.emailEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 registerUser(email, password)
             } else {
-                Toast.makeText(context, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -45,11 +45,11 @@ class SingUpFragment : Fragment() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(context, "Registro bem-sucedido", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Cadastro bem-sucedido", Toast.LENGTH_SHORT).show()
                     // Aqui, você pode redirecionar para outra tela se desejar
                 } else {
-                    Toast.makeText(context, "Erro ao registrar: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                    Log.e("SignUpFragment", "Erro ao registrar usuário", task.exception)
+                    Toast.makeText(context, "Erro ao realizar cadastro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    Log.e("SignUpFragment", "Erro ao realizar cadastro de usuário", task.exception)
                 }
             }
     }
