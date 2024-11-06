@@ -26,9 +26,6 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         auth = Firebase.auth
 
-        if (auth.currentUser != null) {
-            findNavController().navigate(R.id.homeFragment)
-        }
     }
 
     override fun onCreateView(
@@ -54,7 +51,7 @@ class HomeFragment : Fragment() {
                 val result = auth.signInWithEmailAndPassword(email, password).await()
 
                 if (result.user != null) {
-                    findNavController().navigate(R.id.action_homeFragment_to_landingPageFragment)
+                    findNavController().navigate(R.id.landingPageFragment)
                 }else {
                     Toast.makeText(context, "Erro ao realizar login, verifique seus dados", Toast.LENGTH_SHORT).show()
                     Log.e("HomeFragment", "Erro ao realizar login de usuário")
