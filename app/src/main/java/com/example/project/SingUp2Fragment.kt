@@ -65,7 +65,7 @@ class SingUp2Fragment : Fragment() {
             }
         }
 
-        if (validarNumero() == true ) {
+        if (EmailValido() && validarNumero() && validarCEP()) {
             binding.next2Button.setOnClickListener {
                 findNavController().navigate(R.id.action_singUp2Fragment_to_historicoFragment)
             }
