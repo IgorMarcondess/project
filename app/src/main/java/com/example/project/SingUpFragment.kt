@@ -35,8 +35,42 @@ class SingUpFragment : Fragment() {
             val email = binding.emailEditText.text.toString().trim()
             val telefone = binding.phoneEditText.text.toString().trim()
 
-            if (email.isNotEmpty() && password.isNotEmpty() && cpf.isNotEmpty() && telefone.isNotEmpty()
-                && email.contains("@") && email.contains(".com") ) {
+            fun EmailValido(): Boolean {
+                var email = binding.emailEditText.text.toString().trim()
+
+                if (email.contains("@") && email.contains(".com") && email.isNotEmpty()) {
+                    return true
+                } else {
+                    Toast.makeText(context, "Email no formato incorreto.", Toast.LENGTH_SHORT).show()
+                    return false
+                }
+            }
+
+            fun CPFValido(): Boolean {
+                var cpf = binding.cpfEditText.text.toString().trim()
+
+                if (cpf.length == 11 && cpf.isNotEmpty()) {
+                    return true
+                } else {
+                    Toast.makeText(context, "CPF no formato incorreto.", Toast.LENGTH_SHORT).show()
+                    return false
+                }
+            }
+
+            fun validarNumero(): Boolean {
+                val num = binding.phoneEditText.text.toString().trim()
+
+                //VALIDANDO SE O CAMPO TEM STRING COM "it.isDigit()"
+                if (num.all { it.isDigit() }) {
+                    return true
+                } else {
+                    Toast.makeText(context, "Somente números são permitidos.", Toast.LENGTH_SHORT)
+                        .show()
+                    return false
+                }
+            }
+
+            if (EmailValido() == true && password.isNotEmpty() && CPFValido() == true && validarNumero() == true) {
                 registerUser(email, password)
                 findNavController().navigate(R.id.action_singUpFragment_to_singUp2Fragment)
             } else {

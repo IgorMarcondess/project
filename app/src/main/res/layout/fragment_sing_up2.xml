@@ -47,7 +47,7 @@
         android:id="@+id/inserirDados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:text="INSERIR DADOS"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -68,7 +68,7 @@
         android:inputType="number"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
 
     <TextView
         android:id="@+id/numeroTextView"
@@ -82,13 +82,13 @@
         app:layout_constraintStart_toStartOf="@+id/inserirDados"
         app:layout_constraintTop_toBottomOf="@+id/inserirDados" />
 
-    <TextView
-        android:id="@+id/emailTextView"
+    <EditText
+        android:id="@+id/email2EditText"
         android:layout_width="345dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input"
-        android:text="E-MAIL"
+        android:hint="E-MAIL"
         android:padding="12dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintHorizontal_bias="0.478"
@@ -105,22 +105,22 @@
         android:text="CEP"
         android:textColor="#F6EEEE"
         app:layout_constraintBottom_toTopOf="@+id/cepEditText"
-        app:layout_constraintStart_toStartOf="@+id/emailTextView"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+        app:layout_constraintStart_toStartOf="@+id/email2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
 
 
-    <TextView
+    <EditText
         android:id="@+id/cepEditText"
         android:layout_width="198dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/input"
+        android:hint="CEP"
         android:padding="12dp"
-        android:text="CEP"
         app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
 
     <TextView
         android:id="@+id/textView5"
@@ -132,20 +132,20 @@
         android:textColor="#EAE2E2"
         app:layout_constraintBottom_toTopOf="@+id/cpfEditText"
         app:layout_constraintStart_toStartOf="@+id/cpfEditText"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
 
     <Button
         android:id="@+id/next2Button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#005BB5"
+        android:text="Próximo"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Próximo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
