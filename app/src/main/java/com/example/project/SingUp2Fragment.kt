@@ -32,9 +32,9 @@ class SingUp2Fragment : Fragment() {
 
             if(!cepValido(cep)){
                 Toast.makeText(context, "CEP no formato incorreto.", Toast.LENGTH_SHORT).show()
-            } else if (endereco.isNotEmpty()){
+            } else if (endereco.isEmpty()){
                 Toast.makeText(context, "Endereço no formato incorreto.", Toast.LENGTH_SHORT).show()
-            } else if (numero.isNotEmpty()){
+            } else if (numero.isEmpty()){
                 Toast.makeText(context, "Número no formato incorreto.", Toast.LENGTH_SHORT).show()
             }else {
                 findNavController().navigate(R.id.action_singUp2Fragment_to_historicoFragment)
