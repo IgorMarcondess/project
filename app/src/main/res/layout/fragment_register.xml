@@ -6,24 +6,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Avatar Image -->
-
-    <!-- Trocar Imagem Text -->
-
-    <!-- E-mail Label -->
-
-    <!-- E-mail Field -->
-
-    <!-- Trocar E-mail Text -->
-
-    <!-- Senha Label -->
-
-    <!-- Senha Field -->
-
-    <!-- Redefinir Senha Text -->
-
-    <!-- Telefone Label -->
-
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="185dp"
@@ -121,12 +103,6 @@
         app:layout_constraintEnd_toEndOf="@+id/PasswordEditText"
         app:layout_constraintStart_toStartOf="@+id/PasswordEditText"
         app:layout_constraintTop_toBottomOf="@+id/PasswordEditText" />
-
-    <!-- Telefone Field -->
-
-    <!-- Redefinir Telefone Text -->
-
-    <!-- Voltar Button -->
 
     <TextView
         android:id="@+id/phoneLabel"

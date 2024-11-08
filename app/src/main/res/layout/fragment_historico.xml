@@ -19,8 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Pergunta 1 -->
-
     <TextView
         android:id="@+id/tratamentoTextView"
         android:layout_width="wrap_content"

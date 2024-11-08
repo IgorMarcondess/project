@@ -16,6 +16,7 @@ class SingUpFragment : Fragment() {
     private var _binding: FragmentSingUpBinding? = null
     private val binding get() = _binding!!
 
+
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,57 +30,56 @@ class SingUpFragment : Fragment() {
     ): View? {
         _binding = FragmentSingUpBinding.inflate(inflater, container, false)
 
+
         binding.nextButton.setOnClickListener {
             val cpf = binding.cpfEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
             val email = binding.emailEditText.text.toString().trim()
             val telefone = binding.phoneEditText.text.toString().trim()
 
-            fun EmailValido(): Boolean {
-                var email = binding.emailEditText.text.toString().trim()
-
-                if (email.contains("@") && email.contains(".com") && email.isNotEmpty()) {
-                    return true
-                } else {
-                    Toast.makeText(context, "Email no formato incorreto.", Toast.LENGTH_SHORT).show()
-                    return false
-                }
-            }
-
-            fun CPFValido(): Boolean {
-                var cpf = binding.cpfEditText.text.toString().trim()
-
-                if (cpf.length == 11 && cpf.isNotEmpty()) {
-                    return true
-                } else {
-                    Toast.makeText(context, "CPF no formato incorreto.", Toast.LENGTH_SHORT).show()
-                    return false
-                }
-            }
-
-            fun validarNumero(): Boolean {
-                val num = binding.phoneEditText.text.toString().trim()
-
-                //VALIDANDO SE O CAMPO TEM STRING COM "it.isDigit()"
-                if (num.all { it.isDigit() }) {
-                    return true
-                } else {
-                    Toast.makeText(context, "Somente números são permitidos.", Toast.LENGTH_SHORT)
-                        .show()
-                    return false
-                }
-            }
-
-            if (EmailValido() == true && password.isNotEmpty() && CPFValido() == true && validarNumero() == true) {
+            if (!emailValido(email)) {
+                Toast.makeText(context, "Email no formato incorreto.", Toast.LENGTH_SHORT).show()
+            } else if (!cpfValido(cpf)) {
+                Toast.makeText(context, "CPF no formato incorreto.", Toast.LENGTH_SHORT).show()
+            } else if (password.isEmpty()) {
+                Toast.makeText(context, "Senha não pode ser vazia.", Toast.LENGTH_SHORT).show()
+            } else if (!telefoneValido(telefone)) {
+                Toast.makeText(context, "Somente números são permitidos no telefone.", Toast.LENGTH_SHORT).show()
+            } else {
                 registerUser(email, password)
                 findNavController().navigate(R.id.action_singUpFragment_to_singUp2Fragment)
-            } else {
-                Toast.makeText(context, "Por favor, preencha todos os campos corretamente", Toast.LENGTH_SHORT).show()
             }
         }
 
         return binding.root
     }
+
+
+    private fun emailValido(email: String): Boolean{
+        if(email.contains("@") && email.contains(".com") && email.isNotEmpty()){
+            return true
+        }else{
+            return false
+        }
+    }
+
+    private fun cpfValido(cpf: String): Boolean{
+        if(cpf.length == 11 && cpf.isNotEmpty()){
+            return true
+        }else{
+            return false
+        }
+    }
+
+    private fun telefoneValido(telefone: String): Boolean{
+        if(telefone.all { it.isDigit() }){
+            return true
+        }else{
+            return false
+        }
+    }
+
+
     private fun registerUser(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->

@@ -6,20 +6,7 @@
     android:layout_height="match_parent"
     android:background="#003EA6"
     android:padding="16dp"
-    tools:context=".SingUp2Fragment"
-    tools:layout_editor_absoluteX="-16dp"
-    tools:layout_editor_absoluteY="-121dp">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="333dp"
-        android:layout_height="273dp"
-        android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/next2Button"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:srcCompat="@drawable/sorrindo" />
+    tools:context=".SingUp2Fragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineStart"
@@ -35,7 +22,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="6dp" />
 
-    <!-- Guideline superior para margem superior -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
@@ -57,25 +43,12 @@
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
 
-    <EditText
-        android:id="@+id/cpfEditText"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/input"
-        android:hint="Número"
-        android:inputType="number"
-        android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
-
     <TextView
         android:id="@+id/numeroTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="E-mail"
+        android:text="Endereço"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/inserirDados"
         app:layout_constraintHorizontal_bias="0.492"
@@ -83,12 +56,12 @@
         app:layout_constraintTop_toBottomOf="@+id/inserirDados" />
 
     <EditText
-        android:id="@+id/email2EditText"
+        android:id="@+id/enderecoEditText"
         android:layout_width="345dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input"
-        android:hint="E-MAIL"
+        android:hint="ENDEREÇO"
         android:padding="12dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintHorizontal_bias="0.478"
@@ -105,9 +78,8 @@
         android:text="CEP"
         android:textColor="#F6EEEE"
         app:layout_constraintBottom_toTopOf="@+id/cepEditText"
-        app:layout_constraintStart_toStartOf="@+id/email2EditText"
-        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
-
+        app:layout_constraintStart_toStartOf="@+id/enderecoEditText"
+        app:layout_constraintTop_toBottomOf="@+id/enderecoEditText" />
 
     <EditText
         android:id="@+id/cepEditText"
@@ -118,9 +90,9 @@
         android:background="@drawable/input"
         android:hint="CEP"
         android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
+        app:layout_constraintTop_toBottomOf="@+id/enderecoEditText" />
 
     <TextView
         android:id="@+id/textView5"
@@ -132,7 +104,31 @@
         android:textColor="#EAE2E2"
         app:layout_constraintBottom_toTopOf="@+id/cpfEditText"
         app:layout_constraintStart_toStartOf="@+id/cpfEditText"
-        app:layout_constraintTop_toBottomOf="@+id/email2EditText" />
+        app:layout_constraintTop_toBottomOf="@+id/enderecoEditText" />
+
+    <EditText
+        android:id="@+id/cpfEditText"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/input"
+        android:hint="Número"
+        android:padding="12dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enderecoEditText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="273dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/next2Button"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:srcCompat="@drawable/sorrindo" />
 
     <Button
         android:id="@+id/next2Button"

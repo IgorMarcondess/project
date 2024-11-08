@@ -20,8 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Pergunta 1 -->
-
     <TextView
         android:id="@+id/tratamentoTextView"
         android:layout_width="wrap_content"
@@ -45,7 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tratamentoTextView" />
 
-    <!-- Pergunta 2 -->
     <TextView
         android:id="@+id/canalTextView"
         android:layout_width="wrap_content"
@@ -69,7 +66,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/canalTextView" />
 
-    <!-- Pergunta 3 -->
     <TextView
         android:id="@+id/limpezaTextView"
         android:layout_width="wrap_content"
@@ -93,7 +89,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/limpezaTextView" />
 
-    <!-- Pergunta 4 -->
     <TextView
         android:id="@+id/aparelhoTextView"
         android:layout_width="wrap_content"
@@ -117,7 +112,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/aparelhoTextView" />
 
-    <!-- Pergunta 5 -->
     <TextView
         android:id="@+id/cirurgiaTextView"
         android:layout_width="wrap_content"
@@ -142,7 +136,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cirurgiaTextView" />
 
-    <!-- Botão de Enviar -->
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"

@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="20dp" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -47,7 +48,7 @@
         android:id="@+id/EmailEditText"
         android:layout_width="293dp"
         android:layout_height="55dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="text"
@@ -56,22 +57,9 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/background" />
 
-    <TextView
-        android:id="@+id/numeroTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E-MAIL"
-        android:textColor="#003EA6"
-        app:layout_constraintBottom_toTopOf="@+id/EmailEditText"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/background"
-        app:layout_constraintVertical_bias="1.0" />
-
     <EditText
         android:id="@+id/PasswordEditText"
-        android:layout_width="304dp"
+        android:layout_width="310dp"
         android:layout_height="53dp"
         android:layout_marginTop="28dp"
         android:ems="10"
@@ -90,6 +78,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/numeroTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="E-MAIL"
+        android:textColor="#003EA6"
+        app:layout_constraintBottom_toTopOf="@+id/EmailEditText"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/background"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -129,31 +131,31 @@
 
     <Button
         android:id="@+id/LogInbutton"
-        android:layout_width="200dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#005BB5"
+        android:text="Entrar"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Entrar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/ErrorTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/sucessTextView"
+        app:layout_constraintVertical_bias="0.166" />
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="31dp"
         android:backgroundTint="#005BB5"
+        android:text="Registre-se"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Registre-se"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintEnd_toStartOf="@+id/LogInbutton"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/LogInbutton" />
+        app:layout_constraintTop_toTopOf="@+id/LogInbutton" />
 
     <TextView
         android:id="@+id/senhaEditText"
